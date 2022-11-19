@@ -1,8 +1,22 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
+        Animal cat = new Animal("RedCat", 4000);
+        Animal dog = new Animal("Corgi", 5000);
+        Animal bird = new Animal("Oak", 6000);
 
-//        Collection<Integer> list = new ArrayList<>();
+        Animal[] animals = {cat,dog,bird};
+
+        for (Animal i : animals){
+            i.price = i.price + 1;
+        }
+        for (Animal i : animals) {
+            System.out.println(i.price);
+        }
+//       Collection<Integer> list = new ArrayList<>();
 //        list.add(1);
 //        list.add(2);
 //        list.add(3);
@@ -15,30 +29,31 @@ public class Main {
 //        list.addAll(secondList);
 //        System.out.println("Первый лист " + list + " " + "\nРазмер " + list.size() );
 //
-///*        list.clear();
+//       list.clear();
 //        System.out.println(list.size());
 //      System.out.println(list.isEmpty());
-//*/
+//
 //        Object[]arr = list.toArray();
 //
 //        for (Object o : arr) {
 //            System.out.println(o); // ого
 //        }
-
-        // Итератор
-
-        int[] x = {1,2,3,4,5};
-        for (int j : x) {
-            ++j;
-            System.out.println(j);
-        }
-
-        int[] x1 = {1,2,3,4,5};
-        for (int j : x1) {
-            System.out.println(j);
-        }
-
-//        list.iterator().next();
+//
+//        // Итератор
+//
+//        int[] x = {1,2,3,4,5};
+//        for (int j : x) {
+//            ++j;
+//            System.out.println(j);
+//        }
+//
+//        int[] x1 = {1,2,3,4,5};
+//        for (int j : x1) {
+//            System.out.println(j);
+//        }
+//        System.out.println(Arrays.toString(x1));
+//
+//       list.iterator().next();
 
     }
 }
