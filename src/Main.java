@@ -3,25 +3,36 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Animal cat = new Animal("RedCat", 4000);
-        Animal dog = new Animal("Corgi", 5000);
-        Animal bird = new Animal("Oak", 6000);
-        ArrayList<Animal> animalArrayList = new ArrayList<>();
-        animalArrayList.add(cat);
-        animalArrayList.add(dog);
-        animalArrayList.add(bird);
+        Animal cat = new Animal("RedCat", 7000, 22, 500);
+        Animal dog = new Animal("Corgi", 2000, 22, 29);
+        Animal bird = new Animal("King Penguin", 17000, 6, 50);
 
-        Iterator<Animal> animalIterator = animalArrayList.iterator();
+        Animal[] animals = {cat, dog, bird};
+        Arrays.sort(animals);
+        for (Animal i : animals)
+            System.out.println(i);
 
-        while (animalIterator.hasNext()){
-            Animal i = animalIterator.next();
-            i.price += 1000;
-        }
-        System.out.println(animalArrayList);
-
-        System.out.println(cat.getBread());
-        System.out.println(cat.getPrice());
-        System.out.println(cat.getClass());
+// Exception in thread "main" java.lang.ClassCastException: Animal cannot be cast to java.lang.Comparable
+//        Нужно реализовать Comparable
+//        Animal cat = new Animal("RedCat", 4000);
+//        Animal dog = new Animal("Corgi", 5000);
+//        Animal bird = new Animal("Oak", 6000);
+//        ArrayList<Animal> animalArrayList = new ArrayList<>();
+//        animalArrayList.add(cat);
+//        animalArrayList.add(dog);
+//        animalArrayList.add(bird);
+//
+//        Iterator<Animal> animalIterator = animalArrayList.iterator();
+//
+//        while (animalIterator.hasNext()){
+//            Animal i = animalIterator.next();
+//            i.price += 1000;
+//        }
+//        System.out.println(animalArrayList);
+//
+//        System.out.println(cat.getBread());
+//        System.out.println(cat.getPrice());
+//        System.out.println(cat.getClass());
 
 //        ArrayList<Integer> arrayList = new ArrayList<>();
 //        arrayList.add(1);

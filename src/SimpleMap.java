@@ -5,19 +5,22 @@ import java.util.Map;
 public class SimpleMap {
     public static void main(String[] args) {
 
-        int[] marks = {14,42,93,54,55,6,69,7};
-        String[] students = {"Alex", "Bob", "Oak", "Ele"};
 
-        Arrays.sort(marks);
-        Arrays.sort(students);
 
-        for(int i : marks){
-            System.out.println(i);
-        }
 
-        for(String i : students){
-            System.out.println(i);
-        }
+//        int[] marks = {14,42,93,54,55,6,69,7};
+//        String[] students = {"Alex", "Bob", "Oak", "Ele"};
+//
+//        Arrays.sort(marks);
+//        Arrays.sort(students);
+//
+//        for(int i : marks){
+//            System.out.println(i);
+//        }
+//
+//        for(String i : students){
+//            System.out.println(i);
+//        }
 
 //        Map<String,Integer> map = new HashMap<>();
 //        map.put("World", 100);
