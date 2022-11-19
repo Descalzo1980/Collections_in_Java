@@ -1,30 +1,30 @@
 //import java.util.*;
 //
-//public class Main {
+//public class Collections.Main {
 //    public static void main(String[] args) {
-//        Animal cat = new Animal("RedCat", 7000, 22, 500);
-//        Animal dog = new Animal("Corgi", 2000, 22, 29);
-//        Animal bird = new Animal("King Penguin", 17000, 6, 50);
+//        Collections.Animal cat = new Collections.Animal("RedCat", 7000, 22, 500);
+//        Collections.Animal dog = new Collections.Animal("Corgi", 2000, 22, 29);
+//        Collections.Animal bird = new Collections.Animal("King Penguin", 17000, 6, 50);
 //
-//        Animal[] animals = {cat, dog, bird};
+//        Collections.Animal[] animals = {cat, dog, bird};
 //        Arrays.sort(animals);
-//        for (Animal i : animals)
+//        for (Collections.Animal i : animals)
 //            System.out.println(i);
 
-// Exception in thread "main" java.lang.ClassCastException: Animal cannot be cast to java.lang.Comparable
+// Exception in thread "main" java.lang.ClassCastException: Collections.Animal cannot be cast to java.lang.Comparable
 //        Нужно реализовать Comparable
-//        Animal cat = new Animal("RedCat", 4000);
-//        Animal dog = new Animal("Corgi", 5000);
-//        Animal bird = new Animal("Oak", 6000);
-//        ArrayList<Animal> animalArrayList = new ArrayList<>();
+//        Collections.Animal cat = new Collections.Animal("RedCat", 4000);
+//        Collections.Animal dog = new Collections.Animal("Corgi", 5000);
+//        Collections.Animal bird = new Collections.Animal("Oak", 6000);
+//        ArrayList<Collections.Animal> animalArrayList = new ArrayList<>();
 //        animalArrayList.add(cat);
 //        animalArrayList.add(dog);
 //        animalArrayList.add(bird);
 //
-//        Iterator<Animal> animalIterator = animalArrayList.iterator();
+//        Iterator<Collections.Animal> animalIterator = animalArrayList.iterator();
 //
 //        while (animalIterator.hasNext()){
-//            Animal i = animalIterator.next();
+//            Collections.Animal i = animalIterator.next();
 //            i.price += 1000;
 //        }
 //        System.out.println(animalArrayList);
@@ -52,17 +52,17 @@
 //        }
 
 
-//        Animal cat = new Animal("RedCat", 4000);
-//        Animal dog = new Animal("Corgi", 5000);
-//        Animal bird = new Animal("Oak", 6000);
+//        Collections.Animal cat = new Collections.Animal("RedCat", 4000);
+//        Collections.Animal dog = new Collections.Animal("Corgi", 5000);
+//        Collections.Animal bird = new Collections.Animal("Oak", 6000);
 //
-//        Animal[] animals = {cat,dog,bird};
+//        Collections.Animal[] animals = {cat,dog,bird};
 //
-//        for (Animal i : animals){
+//        for (Collections.Animal i : animals){
 //            i.price = i.price + 1;
 //            System.out.println(i.price);
 //        }
-//        for (Animal i : animals) {
+//        for (Collections.Animal i : animals) {
 //            System.out.println(i.bread + " " + i.price);
 //        }
 //       Collection<Integer> list = new ArrayList<>();

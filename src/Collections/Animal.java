@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -49,6 +51,8 @@ public class Animal implements Comparable<Animal> {
             return this.speed - o.speed;
         } else return i;
     }
+
+
 }
 
 class ComparatorByPrice implements Comparator {
@@ -64,7 +68,7 @@ class ComparatorByBread implements Comparator {
     }
 }
 
-class Main{
+class Main implements Comparator{
     public static void main(String[] args) {
 
         Animal cat = new Animal("RedCat", 7005550, 22, 500);
@@ -96,5 +100,12 @@ class Main{
             System.out.println("Скорость " + i.bread + " равна " + i.speed);
         }
 
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        String bread = ((Animal)o1).bread;
+        String bread1 = ((Animal)o2).bread;
+        return bread1.compareTo(bread);
     }
 }

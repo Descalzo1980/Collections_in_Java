@@ -22,7 +22,7 @@
 //    }
 //}
 //
-//class Main{
+//class Collections.Main{
 //    public static void main(String[] args) {
 //
 //        SimpleComparableStudents[] simpleComparableStudents = {
