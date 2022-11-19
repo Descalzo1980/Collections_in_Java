@@ -1,27 +1,12 @@
 public class Animal implements Comparable<Animal> {
     String bread;
-
-    public String getBread() {
-        return bread;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
     int price;
+    int speed;
+    int weight;
 
     public Animal(String bread, int price) {
         this.bread = bread;
         this.price = price;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public int getWeight() {
-        return weight;
     }
 
     public Animal(String bread, int price, int speed, int weight) {
@@ -31,8 +16,21 @@ public class Animal implements Comparable<Animal> {
         this.weight = weight;
     }
 
-    int speed;
-    int weight;
+    public String getBread() {
+        return bread;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
 
     @Override
     public String toString() {
@@ -56,6 +54,5 @@ public class Animal implements Comparable<Animal> {
             return this.speed - o.speed;
         } else return i;
     }
-
-    }
+}
 

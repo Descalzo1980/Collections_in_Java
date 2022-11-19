@@ -1,16 +1,16 @@
-import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-
-        Animal cat = new Animal("RedCat", 7000, 22, 500);
-        Animal dog = new Animal("Corgi", 2000, 22, 29);
-        Animal bird = new Animal("King Penguin", 17000, 6, 50);
-
-        Animal[] animals = {cat, dog, bird};
-        Arrays.sort(animals);
-        for (Animal i : animals)
-            System.out.println(i);
+//import java.util.*;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//
+//        Animal cat = new Animal("RedCat", 7000, 22, 500);
+//        Animal dog = new Animal("Corgi", 2000, 22, 29);
+//        Animal bird = new Animal("King Penguin", 17000, 6, 50);
+//
+//        Animal[] animals = {cat, dog, bird};
+//        Arrays.sort(animals);
+//        for (Animal i : animals)
+//            System.out.println(i);
 
 // Exception in thread "main" java.lang.ClassCastException: Animal cannot be cast to java.lang.Comparable
 //        Нужно реализовать Comparable
@@ -105,5 +105,5 @@ public class Main {
 //
 //       list.iterator().next();
 
-    }
-}
+//    }
+//}
