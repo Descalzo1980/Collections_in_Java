@@ -1,21 +1,35 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        Animal cat = new Animal("RedCat", 4000);
-        Animal dog = new Animal("Corgi", 5000);
-        Animal bird = new Animal("Oak", 6000);
 
-        Animal[] animals = {cat,dog,bird};
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
 
-        for (Animal i : animals){
-            i.price = i.price + 1;
+        Iterator<Integer> iterator = arrayList.iterator();
+        while (iterator.hasNext()){
+            Integer i = iterator.next();
+            System.out.println(i);
         }
-        for (Animal i : animals) {
-            System.out.println(i.price);
-        }
+
+//        Animal cat = new Animal("RedCat", 4000);
+//        Animal dog = new Animal("Corgi", 5000);
+//        Animal bird = new Animal("Oak", 6000);
+//
+//        Animal[] animals = {cat,dog,bird};
+//
+//        for (Animal i : animals){
+//            i.price = i.price + 1;
+//            System.out.println(i.price);
+//        }
+//        for (Animal i : animals) {
+//            System.out.println(i.bread + " " + i.price);
+//        }
 //       Collection<Integer> list = new ArrayList<>();
 //        list.add(1);
 //        list.add(2);
