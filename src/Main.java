@@ -1,21 +1,46 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(1);
-        arrayList.add(2);
-        arrayList.add(3);
+        Animal cat = new Animal("RedCat", 4000);
+        Animal dog = new Animal("Corgi", 5000);
+        Animal bird = new Animal("Oak", 6000);
+        ArrayList<Animal> animalArrayList = new ArrayList<>();
+        animalArrayList.add(cat);
+        animalArrayList.add(dog);
+        animalArrayList.add(bird);
 
-        Iterator<Integer> iterator = arrayList.iterator();
-        while (iterator.hasNext()){
-            Integer i = iterator.next();
-            System.out.println(i);
+        Iterator<Animal> animalIterator = animalArrayList.iterator();
+
+        while (animalIterator.hasNext()){
+            Animal i = animalIterator.next();
+            i.price += 1000;
         }
+        System.out.println(animalArrayList);
+
+        System.out.println(cat.getBread());
+        System.out.println(cat.getPrice());
+        System.out.println(cat.getClass());
+
+//        ArrayList<Integer> arrayList = new ArrayList<>();
+//        arrayList.add(1);
+//        arrayList.add(2);
+//        arrayList.add(3);
+//
+//
+//        Iterator<Integer> iterator = arrayList.iterator();
+//        while (iterator.hasNext()){
+//            Integer i = iterator.next();
+//            System.out.println(i);
+//        }
+//
+//        ListIterator<Integer> listIterator = arrayList.listIterator();
+//        while (listIterator.hasNext()){
+//            Integer i = listIterator.next();
+//            System.out.println(i);
+//        }
+
 
 //        Animal cat = new Animal("RedCat", 4000);
 //        Animal dog = new Animal("Corgi", 5000);
