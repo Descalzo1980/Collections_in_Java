@@ -31,5 +31,11 @@ public class SimpleArray {
         for (String i : arrayList){
             System.out.println(i);
         }
+        System.out.println("***********************************************");
+        Integer result = arrayList.indexOf("Stas");
+        System.out.println(result);
+        for (String i : arrayList){
+            System.out.println(i);
+        }
     }
 }
