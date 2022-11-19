@@ -2,7 +2,6 @@
 //
 //public class Main {
 //    public static void main(String[] args) {
-//
 //        Animal cat = new Animal("RedCat", 7000, 22, 500);
 //        Animal dog = new Animal("Corgi", 2000, 22, 29);
 //        Animal bird = new Animal("King Penguin", 17000, 6, 50);

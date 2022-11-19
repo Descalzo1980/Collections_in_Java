@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Animal implements Comparable<Animal> {
     String bread;
     int price;
@@ -37,15 +40,7 @@ public class Animal implements Comparable<Animal> {
         return this.bread + " " + this.price + " " + this.speed + " " + this.weight;
     }
 
-//    @Override
-//    public int compareTo(Object o) {
-//        int i = this.speed - ((Animal)o).speed;
-//        if(i == 0){
-//            return  this.price - ((Animal) o).price;
-//        }else {
-//            return i;
-//        }
-//    }
+
 
     @Override
     public int compareTo(Animal o) {
@@ -56,3 +51,32 @@ public class Animal implements Comparable<Animal> {
     }
 }
 
+class ComparatorByPrice implements Comparator {
+    @Override
+    public int compare(Object o1, Object o2) {
+        return ((Animal)o1).price - ((Animal)o2).price;
+    }
+}
+
+class ComparatorByBread implements Comparator {
+    @Override
+    public int compare(Object o1, Object o2) {return ((Animal)o1).bread.compareTo(((Animal)o2).bread);
+    }
+}
+
+class Main{
+    public static void main(String[] args) {
+
+        Animal cat = new Animal("RedCat", 7005550, 22, 500);
+        Animal dog = new Animal("Corgi", 2088800, 22, 29);
+        Animal bird = new Animal("King Penguin", 17088800, 6, 50);
+
+        Animal[] animals = {cat,dog,bird};
+
+        Arrays.sort(animals,new ComparatorByPrice());
+
+        for (Animal i : animals){
+            System.out.println(i);
+        }
+    }
+}
