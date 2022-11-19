@@ -68,15 +68,33 @@ class Main{
     public static void main(String[] args) {
 
         Animal cat = new Animal("RedCat", 7005550, 22, 500);
-        Animal dog = new Animal("Corgi", 2088800, 22, 29);
+        Animal dog = new Animal("Corgi", 28800, 22, 29);
         Animal bird = new Animal("King Penguin", 17088800, 6, 50);
+        Animal tiger = new Animal("Tiger", 555555, 60, 550);
 
-        Animal[] animals = {cat,dog,bird};
+        Animal[] animals = {cat,dog,bird,tiger};
 
         Arrays.sort(animals,new ComparatorByPrice());
 
         for (Animal i : animals){
             System.out.println(i);
         }
+        System.out.println("************************************");
+        Arrays.sort(animals,new ComparatorByBread());
+
+        for (Animal i : animals){
+            System.out.println(i);
+        }
+        System.out.println("************************************");
+        Arrays.sort(animals, new Comparator<Animal>() {
+            @Override
+            public int compare(Animal o1, Animal o2) {
+                return o1.speed - o2.speed;
+            }
+        });
+        for (Animal i : animals){
+            System.out.println("Скорость " + i.bread + " равна " + i.speed);
+        }
+
     }
 }
