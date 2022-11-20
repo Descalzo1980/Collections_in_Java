@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 
 public class Main {
     public static void main(String[] args) {
+
         ArrayDeque<String> states = new ArrayDeque<>();
         states.add("Россия");
         states.add("Франция");
