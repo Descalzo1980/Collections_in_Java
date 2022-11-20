@@ -41,11 +41,17 @@ public class SimpleQueue {
 class QueueMain{
     public static void main(String[] args) {
 
-        SimpleQueue simpleQueue = new SimpleQueue(10);
+        SimpleQueue simpleQueue = new SimpleQueue(2);
         simpleQueue.insert(10);
         simpleQueue.insert(20);
         simpleQueue.insert(30);
         simpleQueue.insert(40);
+        simpleQueue.remove();
+        simpleQueue.remove();
+        simpleQueue.insert(110);
+        simpleQueue.insert(210);
+        simpleQueue.insert(310);
+        simpleQueue.insert(410);
 
         while (!simpleQueue.isEmpty()){
             long n = simpleQueue.remove();
