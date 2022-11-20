@@ -17,8 +17,15 @@ public class Main {
             arrayList.add(s);
         }
 
-        for (String s : arrayList){
-            System.out.println(s);
+        for (int i = 0; i < 5 ;i++){
+            String s1 = arrayList.remove(arrayList.size()-1);
+            arrayList.add(0,s1);
+        }
+
+        for (int i = 0; i < arrayList.size(); i++) {
+            int j = arrayList.size() - i - 1;
+            System.out.println(arrayList.get(j));
+
         }
     }
 }
