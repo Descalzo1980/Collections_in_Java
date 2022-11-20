@@ -1,38 +1,41 @@
 package ListSetQueue.ArrayList.List;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 
-public class LinkedListvsArrayList implements Runnable {
+public class LinkedListvsArrayList {
     public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        ArrayList<Integer> arrayList = new ArrayList<>();
-
-        Thread currentThread = new Thread(() -> {
-            for (int i = 0; i < 10000; i++) {
-                list.add(i);
-                System.out.println("LinkedList" + list.size());
-            }
-        });
-            currentThread.start();
-
-        Thread secondThread = new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                for (int i = 0; i < 10000; i++) {
-                    arrayList.add(i);
-                    System.out.println("Array list" + arrayList.size());
-
-                }
-            }
-        };
-        secondThread.start();
+        System.out.println(getTimeOfInsert(new ArrayList()));
+        System.out.println(getTimeOfInsert(new LinkedList()));
     }
 
-    @Override
-    public void run() {
-        System.out.println("thread is running...");
+    public static long getTimeOfInsert(List<Integer> list) {
+        Date currentTime = new Date();
+        insert100000(list);
+        Date newTime = new Date();
+        long msDelay = newTime.getTime() - currentTime.getTime();
+        System.out.println("Заняло времени: " + msDelay + " в мс");
+        return msDelay;
     }
 
+    public static void insert100000(List list) {
+        for (int i = 0; i < 100000; i++) {
+            list.add(new Object());
+        }
+    }
 }
+
+/*    Заняло времени: 38350 в мс index 0
+38350 AL
+    Заняло времени: 110 в мс
+110 LL
+
+Заняло времени: 16 в мс wth index
+16
+Заняло времени: 4 в мс
+4
+*/
+
+
