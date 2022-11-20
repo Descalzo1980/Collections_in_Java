@@ -1,4 +1,4 @@
-package ListSetQueue.ArrayList;
+package ListSetQueue.ArrayList.List;
 
 import java.util.ArrayList;
 
