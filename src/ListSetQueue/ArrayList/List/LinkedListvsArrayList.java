@@ -11,19 +11,35 @@ public class LinkedListvsArrayList {
         System.out.println(getTimeOfInsert(new LinkedList()));
     }
 
-    public static long getTimeOfInsert(List<Integer> list) {
+    public static long getTimeOfInsert(List list) {
         Date currentTime = new Date();
         insert100000(list);
+        remove50000(list);
         Date newTime = new Date();
         long msDelay = newTime.getTime() - currentTime.getTime();
-        System.out.println("Заняло времени: " + msDelay + " в мс");
+        System.out.println("Вставка заняла времени: " + msDelay + " в мс");
+        getTimeOfRemove(list);
         return msDelay;
+    }
+    public static void getTimeOfRemove(List list){
+        Date currentTimeRemove = new Date();
+        remove50000(list);
+        Date newTimeRemove = new Date();
+        long msDelay = newTimeRemove.getTime() - currentTimeRemove.getTime();
+        System.out.println("Удаление заняло времени : " + msDelay + " в мс");
     }
 
     public static void insert100000(List list) {
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             list.add(new Object());
         }
+    }
+
+    public static void get5000(List list){
+        list.get(5000);
+    }
+    public static void remove50000(List list){
+        list.remove(500000);
     }
 }
 
