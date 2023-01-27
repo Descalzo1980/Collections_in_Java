@@ -5,7 +5,7 @@ import java.util.*;
 public class HelloWorld {
     public static void main(String[] args) {
         Collection<String> collection = new ArrayList<>();
-        ListWork<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         Set<String> set = new HashSet<>();
         Queue<String> queue = new LinkedList<>();
         Map<String, String> map = new HashMap<>();
