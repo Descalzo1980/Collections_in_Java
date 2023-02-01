@@ -26,6 +26,7 @@ public class Test {
         for (int i = 0; i < 10000000;i++){
             integerList.add(i);
         }
+
         long end = System.currentTimeMillis();
 
         System.out.println(end - start);
@@ -34,6 +35,7 @@ public class Test {
         for (int i = 0; i < 10000000;i++) {
             arrayList.add(i);
         }
+
         long end1 = System.currentTimeMillis();
         System.out.println(end1 - start1);
     }
