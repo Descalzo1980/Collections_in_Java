@@ -7,9 +7,15 @@ public class Test2 {
         test2.doWork();
 
     }
-    public synchronized void increment(){
-        counter++;
+//    public synchronized void increment(){ *1
+//        counter++;
+//    }
+    public void increment(){
+        synchronized (this){ // это блок , исполняется только одним потоком, то же самое что *1
+            counter++;
+        }
     }
+
     public void doWork(){
         Thread thread = new Thread(() -> {
             for (int i = 0; i < 10000; i++)
