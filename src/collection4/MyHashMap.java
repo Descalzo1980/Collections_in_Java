@@ -7,23 +7,23 @@ import java.util.TreeMap;
 
 public class MyHashMap {
     public static void main(String[] args) {
-        Map<Integer,String> map = new HashMap<>();// пор€док не соблюдаетс€, ключи уникальные, значени€ любые
+        Map<String,Integer> map = new HashMap<>();// пор€док не соблюдаетс€, ключи уникальные, значени€ любые
         Map<Integer,String> map1 = new TreeMap<>(); // сортировка по ключу
         Map<Integer,String> map2 = new LinkedHashMap<>();// пор€док гарантирован добавлени€ ключ значение
-//        map.put("One", 1);
-//        map.put("Two", 2);
-//        map.put("Three", 3);
-//        map.put("Five", 5);
-//        map.put("Six", 6);
-//        map.put("Seven", 7);
-//        map.put("Eight", 8);
-//        map.forEach((key, value) -> System.out.println("Key: " + key + " Value " + value));
+        map.put("One", 1);
+        map.put("Two", 2);
+        map.put("Three", 3);
+        map.put("Five", 5);
+        map.put("Six", 6);
+        map.put("Seven", 7);
+        map.put("Eight", 8);
+        map.forEach((key, value) -> System.out.println("Key: " + key + " Value " + value));
 
-        testMap(map);
-        System.out.println("*****");
-        testMap(map1);
-        System.out.println("*******");
-        testMap(map2);
+//        testMap(map);
+//        System.out.println("*****");
+//        testMap(map1);
+//        System.out.println("*******");
+//        testMap(map2);
 
     }
 
