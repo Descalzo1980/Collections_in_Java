@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Test6 {
     public static void main(String[] args) throws InterruptedException {
-        WaitAndNotify waitAndNotify = new WaitAndNotify();
+        ProducerConsumer waitAndNotify = new ProducerConsumer();
 
         Thread thread1 = new Thread(new Runnable() {
             @Override
@@ -34,12 +34,12 @@ public class Test6 {
     }
 }
 
-class WaitAndNotify {
+class ProducerConsumer {
     public void produce() throws InterruptedException {
         synchronized (this) {
             System.out.println("Producer thread started...");
 //            wait(); // 1 - отдаем intrinsic lock, ждем notify на этом объекте
-            wait(4000);
+            this.wait(4000);
             System.out.println("Producer thread resumed...");
         }
     }
@@ -51,7 +51,7 @@ class WaitAndNotify {
             synchronized (this){
                 System.out.println("Waiting for return key pressed");
                 scanner.nextLine();
-                notify();
+                this.notify();
 
                 Thread.sleep(5000);
             }
