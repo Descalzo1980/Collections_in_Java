@@ -1,7 +1,5 @@
 package flows6;
 
-import sun.awt.windows.ThemeReader;
-
 import java.util.Scanner;
 
 public class Test6 {
@@ -40,7 +38,8 @@ class WaitAndNotify {
     public void produce() throws InterruptedException {
         synchronized (this) {
             System.out.println("Producer thread started...");
-            wait(); // 1 - отдаем intrinsic lock, ждем notify на этом объекте
+//            wait(); // 1 - отдаем intrinsic lock, ждем notify на этом объекте
+            wait(4000);
             System.out.println("Producer thread resumed...");
         }
     }
@@ -52,7 +51,10 @@ class WaitAndNotify {
             synchronized (this){
                 System.out.println("Waiting for return key pressed");
                 scanner.nextLine();
-            };
+                notify();
+
+                Thread.sleep(5000);
+            }
         }
     }
 }
