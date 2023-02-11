@@ -34,3 +34,36 @@ class MyThread extends Thread{
 * для избежания когерентности (взаимосвязи)
 * используй volatile(типа не кэшируй её)
 * */
+
+/*
+* override fun onViewCreated(
+ view: View,
+ savedInstanceState: Bundle?
+) {
+ // DO NOT DO THIS!
+ myButton.setOnClickListener {
+ Thread {
+ val status = doTimeConsumingThing()
+ view.findViewById<TextView>(R.id.textview_second)
+ .setText(status)
+ }
+ .start()
+ }
+ *
+ * override fun onViewCreated(
+ view: View,
+ savedInstanceState: Bundle?
+) {
+ // DO NOT DO THIS EITHER!
+ myButton.setOnClickListener {
+ Thread {
+ val status = doTimeConsumingThing()
+ view.post {
+ view.findViewById<TextView>(R.id.textview_second)
+ .setText(status)
+ }
+ }
+ .start()
+ }
+}
+}*/
