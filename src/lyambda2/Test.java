@@ -35,6 +35,23 @@ public class Test {
         System.out.println(Arrays.toString(arr2));
         System.out.println(list2);
 
+        // forEach
+        Arrays.stream(arr2).forEach(System.out::println);
+        list2.forEach(System.out::println);
+
+        // reduce
+        int[] arr3 = new int[10];
+        List<Integer> list3 = new ArrayList<>();
+
+        fillArr(arr3);
+        fillList(list3);
+
+        int sum = Arrays.stream(arr3).reduce(0,(acc, b) -> acc + b);
+//        int sum = Arrays.stream(arr3).reduce((acc, b) -> acc + b);
+        int sum2 = list3.stream().reduce((acc,b) -> acc * b).get();
+        System.out.println("Сумма всех элементов " + sum);
+        System.out.println("Произведение всех элементов " + sum2);
+
     }
 
     private static void fillList(List<Integer> list) {
