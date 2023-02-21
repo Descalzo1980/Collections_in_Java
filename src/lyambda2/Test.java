@@ -47,10 +47,18 @@ public class Test {
         fillList(list3);
 
         int sum = Arrays.stream(arr3).reduce(0,(acc, b) -> acc + b);
-//        int sum = Arrays.stream(arr3).reduce((acc, b) -> acc + b);
+//        int sum = Arrays.stream(arr3).reduce((acc, b) -> acc + b).getAsInt();
         int sum2 = list3.stream().reduce((acc,b) -> acc * b).get();
         System.out.println("Сумма всех элементов " + sum);
         System.out.println("Произведение всех элементов " + sum2);
+
+
+        int[] arr4 = new int[10];
+        fillArr(arr4);
+
+        int[] res1 = Arrays.stream(arr4).filter(a -> a % 2 == 1).map(a -> a * 2).toArray();
+        System.out.println(Arrays.toString(res1));
+
 
     }
 
